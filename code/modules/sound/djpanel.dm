@@ -10,7 +10,7 @@ client/proc/open_dj_panel()
 		boutput(src, "Only administrators or those with access may use this command.")
 		return
 
-	global.dj_panel.ui_interact(src)
+	global.dj_panel.ui_interact(src.mob)
 
 /** DJ Panel for Admins
  *  Allows for easily accessible music/sound playing for admins/allowed players.
@@ -48,6 +48,7 @@ client/proc/open_dj_panel()
 	data["loadedSound"] = loaded_sound
 	data["soundVol"] = sound_volume
 	data["soundFreq"] = sound_frequency
+	data["announceMode"] = user.client?.djmode
 
 	return data
 
@@ -133,7 +134,7 @@ client/proc/open_dj_panel()
 				var/sound/stopsound = sound(null, wait = 0, channel=admin_sound_channel)
 				for (var/client/C in clients)
 					C << stopsound
-					LAGCHECK(LAG_MEDIUM)
+					LAGCHECK(LAG_MED)
 			. = TRUE
 
 		if("stop-radio")
@@ -141,10 +142,10 @@ client/proc/open_dj_panel()
 				var/sound/stopsound = sound(null, wait = 0, channel=1013)
 				for (var/client/C in clients)
 					C << stopsound
-					LAGCHECK(LAG_MEDIUM)
+					LAGCHECK(LAG_MED)
 			. = TRUE
 
-
+/*
 chui/window/dj_panel //global panel
 	name = "DJ Panel"
 	windowSize = "500x400"
@@ -166,6 +167,7 @@ chui/window/dj_panel //global panel
 		html += "[theme.generateButton("stopsong", "Stop Last Song")] &nbsp; &nbsp; [theme.generateButton("stopradio", "Stop Radio for Everyone")]"
 
 		return html.Join()
+*/
 
 /** Moves the global admin sound channel up or down one
  *
