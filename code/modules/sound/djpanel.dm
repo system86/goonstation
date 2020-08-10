@@ -45,9 +45,9 @@ client/proc/open_dj_panel()
 
 /datum/dj_panel/ui_data(mob/user)
 	var/list/data = list()
-	data["loadedSound"] = loaded_sound
-	data["soundVol"] = sound_volume
-	data["soundFreq"] = sound_frequency
+	data["loadedSound"] = "[loaded_sound]"
+	data["volume"] = sound_volume
+	data["frequency"] = sound_frequency
 	data["announceMode"] = user.client?.djmode
 
 	return data
@@ -62,19 +62,14 @@ client/proc/open_dj_panel()
 
 	switch(action)
 		if("set-file")
-			loaded_sound = (input(usr, "Upload a file:", "File Uploader - No 50MB songs!", "") as sound|null)
+			var/uploaded = input(usr.client, "Upload a file:", "File Uploader - No 50MB songs!", "") as sound|null
+			loaded_sound = uploaded
 			. = TRUE
 
 		if("set-volume")
 			var/new_volume = params["volume"]
 			if(new_volume  == "reset")
 				sound_volume = initial(sound_volume)
-				. = TRUE
-			else if(new_volume == "min")
-				sound_volume = 0
-				. = TRUE
-			else if(new_volume == "max")
-				sound_volume = 100
 				. = TRUE
 			else if(text2num(new_volume) != null)
 				sound_volume = clamp(text2num(new_volume), 0, 100)
@@ -146,27 +141,18 @@ client/proc/open_dj_panel()
 			. = TRUE
 
 /*
-chui/window/dj_panel //global panel
-	name = "DJ Panel"
-	windowSize = "500x400"
-	flags = CHUI_FLAG_MOVABLE | CHUI_FLAG_CLOSABLE | CHUI_FLAG_SIZABLE
-	var/loaded_sound = null //holds current song file
 
-	GetBody()
-		var/list/html = list()
 
-		html += "<strong>Loaded Soundfile:</strong> [theme.generateButton("changefile", "[template("set_file", "None")]")] <br>"
-		html += "<strong>Sound Volume:</strong> [theme.generateButton("changevol", "[template("set_volume", 50)]")] <br>"
-		html += "<strong>Sound Frequency:</strong> [theme.generateButton("changefreq", "[template("set_freq", 1)]")] <br>"
-		html += "<strong>DJ Announce Mode: [theme.generateButton("toggleanndj", "Toggle")]</strong> <br>"
+
+
+
+
 		html += "<strong>Current Sound Channel:</strong> [template("admin_channel", admin_sound_channel)]<br><hr><br>"
 
-		html += "[theme.generateButton("playsound", "Play Sound")] &nbsp; &nbsp; [theme.generateButton("playmusic", "Play Music")]<br><br>"
-		html += "[theme.generateButton("playamb", "Play Local Ambience")] &nbsp; &nbsp; [theme.generateButton("playremote", "Play Remote File")]<br><br>"
-		html += "[theme.generateButton("playplayr", "Play To Player")] &nbsp; &nbsp; [theme.generateButton("toggledj", "Toggle DJ For Player")]<br><br>"
-		html += "[theme.generateButton("stopsong", "Stop Last Song")] &nbsp; &nbsp; [theme.generateButton("stopradio", "Stop Radio for Everyone")]"
 
-		return html.Join()
+
+
+
 */
 
 /** Moves the global admin sound channel up or down one
