@@ -1,4 +1,72 @@
 
+(t)tue aug 11 20
+(u)Flaborized
+(p)1694
+(e)🎨|sprites
+(+)Resprited captain's spacesuit, added captain's backpack.
+(u)Emcee-Gore
+(p)1537
+(e)🆕🗺🎨|feature, mapping, sprites
+(*)Added Honkys Clownspider Farm to the Z5 mining level generation in space.
+(*)Added Discount Dan's delivery asteroid to the Z5 mining level generation in space.
+(+)Added Discount Dan's crates and a Discount Dan's beret.
+(u)Kubius
+(p)1721
+(e)🆕|feature
+(*)You can now buy yacht dice score sheets at card vendors. Dice sold separately.
+(u)Comradef191
+(p)1753
+(e)🗺|mapping
+(*)Added Atmospherics Forcefields to Cogmap 1, located at the hanger bays and Cargo Routers.
+(+)Revamped Engineering Access on Cogmap 1; Engineers no longer have direct access to the AI Upload Foyer, Engineering Storage and Engineering Dock moved to 'Engineering Storage' Access rather than 'Engineering Engine', Engineering Power Room & both substations now use 'Engineering Power' Access rather than 'Engineering Engine' & the entrance to Engineering no longer requires Engineering Engine access
+(+)Mining is no longer publicly accessible via space! Use the disposals chute in the Mining Shuttle Dock if needed!
+(+)QM Cargo Intake extended by two tiles
+(u)makkipakki
+(p)1785
+(e)🐛|bug
+(*)Made ghost drones emit a coloured glow like they used to!
+(u)adharainspace
+(p)1758
+(e)⚖|balance
+(*)fixed an oversight that made it so blobs generated biopoints slower than intended.
+(+)blobs now have a small starting biopoint cap increase
+(t)mon aug 10 20
+(u)MarkNstein
+(p)1759
+(e)🆕|feature
+(*)You can now chug drinks by click-dragging them onto your sprite from your hand.
+(u)BatElite
+(p)1665
+(e)🆕🎨|feature, sprites
+(*)Engineering and civilian cyborgs and ghostdrones now have a tool to replace lamps in fittings.
+(+)New sprites for the cyborg omnitool and atmospherics transporter. The latter now accepts fluid canisters for ocean map breaches.
+(u)nüke
+(p)1698
+(e)🎨|sprites
+(+)Added 8 new pyro airlock variants.
+(u)Carbadox
+(p)1620
+(e)🆕🗺|feature, mapping
+(+)Added new items to the clothing booth, namely to the accessories, casual, costumes, formal, jackets and the new headwear section.
+(+)Added Clothing Booth to manta
+(u)Phyvo
+(p)1583
+(e)⚖|balance
+(*)Rebalanced artifact probabilities to make better artifacts more common.
+(+)Buffed these artifact types: mining tools, energy guns, power generators.
+(u)system86
+(p)1257
+(e)🆕🎨|feature, sprites
+(*)Added MechComp component containers- they hold your mechcomp (and can be portable!)
+(u)Superlagg
+(p)1627
+(e)🆕|feature
+(*)Beepsky now drops his own personal stun baton, and he can now be properly rebuilt when he dies.
+(+)Beepsky's baton can be used to build other non-Beepsky securitrons, granting them some of his robustness.
+(u)nüke
+(p)1700
+(e)🎨|sprites
+(+)Updated floor guide decals and added 3 new floor guide icons.
 (t)sun aug 09 20
 (u)Moonlol
 (p)1755
@@ -12,10 +80,6 @@
 (p)1744
 (e)🐛|bug
 (+)Cyborg cooking privileges revoked (for their own tools).
-(u)Carbadox
-(p)1748
-(e)🆕|feature
-(+)Chaplain can now earn Job XP by Bible Healing/Smiting
 (t)sat aug 08 20
 (u)Mordent
 (p)1691
